@@ -2,14 +2,14 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Главная страница магазина Техномарт</title>
+  <title>Каталог магазина Техномарт</title>
 </head>
 <body>
   <header class="main-header">
     <div class="header-top-wrapper">
       <div class="header-top container">
         <div class="header-top-left">
-          <a class="main-header-logo">Техномарт</a>
+          <a class="main-header-logo" href="index.html">Техномарт</a>
           <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
             <label class="visually-hidden" for="search">Поиск</label>
             <input class="search-input" id="search" type="search" placeholder="Поиск:">
@@ -28,34 +28,46 @@
         </div>
       </div>
     </div>
-    <div class="header-middle-wrapper">
+     <div class="header-middle-wrapper">
       <h1 class="header-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
       <section class="header-contacts">
         <p class="phone">+7 (812) 555-05-55</p>
         <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </section>
       <section class="user">
-        <ul class="user-list-authorized">
-          <li class="user-list-item">
-            <a class="user-link user-link-login" href="#">Войти</a>
+        <ul class="user-list-unauthorized">
+          <li class="user-item-unauthorized">
+            <a class="user-link-info" href="#">
+              <span class="user-name">Равшан Джамшутович</span>
+            </a>
           </li>
-          <li class="user-list-item">
-            <a class="user-link" href="#signup.html">Регистрация</a>
+          <li class="user-item-unauthorized">
+            <a class="user-link-logout" href="#logout.html">
+              <span class="visually-hidden">Выйти</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="user-list-account">
+          <li class="user-item-account">
+            <a class="user-link-account" href="#card.html">Мои заказы</a>
+          </li>
+          <li class="user-item-account">
+            <a class="user-link-account" href="#">Личный кабинет</a>
           </li>
         </ul>
       </section>
-    </div>
-    <nav class="main-nav">
+      <nav class="main-nav">
       <ul class="main-nav-list">
-        <li class="main-nav-list-item"><a>Главная</a></li>
+        <li class="main-nav-list-item"><a href="index.html">Главная</a></li>
         <li class="main-nav-list-item"><a href="#about-us.html">Компания</a></li>
-        <li class="main-nav-list-item"><a href="catalog.html">Каталог</a></li>
+        <li class="main-nav-list-item"><a>Каталог</a></li>
         <li class="main-nav-list-item"><a href="#news.html">Новости</a></li>
         <li class="main-nav-list-item"><a href="#promo.html">Спецпредложения</a></li>
         <li class="main-nav-list-item"><a href="#delivery.html">Доставка</a></li>
         <li class="main-nav-list-item"><a href="#contacts.html">Контакты</a></li>
       </ul>
     </nav>
+    </div>
   </header>
 </body>
 </html>
