@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <div class="header-middle-wrapper">
+    <div class="header-middle-wrapper container">
       <h1 class="header-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
       <section class="header-contacts">
         <p class="phone">+7 (812) 555-05-55</p>
@@ -45,7 +45,7 @@
         </ul>
       </section>
     </div>
-    <nav class="main-nav">
+    <nav class="main-nav container">
       <ul class="main-nav-list">
         <li class="main-nav-list-item"><a>Главная</a></li>
         <li class="main-nav-list-item"><a href="#about-us.html">Компания</a></li>
@@ -58,31 +58,63 @@
     </nav>
   </header>
   <main>
-    <section class="features">
-      <h2 class="visually-hidden">Преимущества</h2>
-      <ul class="features-list">
-        <li class="features-item">
-          <h3 class="features-title">Материалы</h3>
-          <a class="button features-button" href="#">На любой вкус</a>
-        </li>
-        <li class="features-item">
-          <h3 class="features-title">Инструмент</h3>
-          <a class="button features-button" href="#">На все случаи</a>
-        </li>
-        <li class="features-item">
-          <h3 class="features-title">Техника</h3>
-          <a class="button features-button" href="#">Для стройки</a>
-        </li>
-        <li class="features-item">
-          <h3 class="features-title">Скидки 50%</h3>
-          <a class="button features-button" href="#">На 350 товаров</a>
-        </li>
-        <li class="features-item">
-          <h3 class="features-title">Доставка</h3>
-          <a class="button features-button" href="#">Бесплатно</a>
-        </li>
-      </ul>
-    </section>
+    <div class="promo-block container">
+      <section class="features">
+        <h2 class="visually-hidden">Преимущества</h2>
+        <ul class="features-list">
+          <li class="features-item">
+            <h3 class="features-title">Материалы</h3>
+            <a class="button features-button" href="#">На любой вкус</a>
+          </li>
+          <li class="features-item">
+            <h3 class="features-title">Инструмент</h3>
+            <a class="button features-button" href="#">На все случаи</a>
+          </li>
+          <li class="features-item">
+            <h3 class="features-title">Техника</h3>
+            <a class="button features-button" href="#">Для стройки</a>
+          </li>
+          <li class="features-item">
+            <h3 class="features-title">Скидки 50%</h3>
+            <a class="button features-button" href="#">На 350 товаров</a>
+          </li>
+          <li class="features-item">
+            <h3 class="features-title">Доставка</h3>
+            <a class="button features-button" href="#">Бесплатно</a>
+          </li>
+        </ul>
+      </section>
+      <section class="sliders">
+        <h2 class="visually-hidden">Промо-предложения</h2>
+        <div class="switches">
+          <input type="radio" id="btn-1" name="toggle">
+          <input type="radio" id="btn-2" name="toggle" checked>
+        </div>
+        <div class="switches-controls">
+          <label for="btn-1"></label>
+          <label for="btn-2"></label>
+        </div>
+        <div class="arrows-controls">
+          <button class="arrows arrows-prev"><span class="visually-hidden">Предыдущий слайдер</span></button>
+          <button class="arrows arrows-next"><span class="visually-hidden">Следующий слайдер</span></button>
+        </div>
+        <div class="sliders-inner">
+          <ul class="sliders-list">
+            <li class="sliders-item">
+              <h3 class="sliders-title">Перфораторы</h3>
+              <p class="sliders-description">Настоящие мужские игрушки</p>
+              <img class="sliders-picture" src="img/.jpg" width="620" height="266" alt="Изображен мужчина работающий перфоратором">
+            </li>
+            <li class="sliders-item">
+              <h3 class="sliders-title">Дрели</h3>
+              <p class="sliders-description">Соседям на радость</p>
+              <img class="sliders-picture" src="img/.jpg" width="620" height="266" alt="Изображен мужчина работающий дрелью">
+            </li>
+          </ul>
+          <a class="button sliders-button" href="catalog.html">Открыть каталог</a>
+        </div>
+      </section>
+    </div>
   </main>
 </body>
 </html>
