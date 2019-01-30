@@ -25,7 +25,7 @@
             <a class="header-top-link cart-link" href="#cart.html">Корзина: 0</a>
           </div>
           <div class="order">
-            <a class="order-link" href="#cart.html">Oформить заказ</a>
+            <a class="header-top-link order-link" href="#cart.html">Oформить заказ</a>
           </div>
         </div>
       </div>
@@ -40,11 +40,11 @@
       <section class="user">
         <h2 class="visually-hidden">Личный профайл</h2>
         <ul class="user-list-authorized">
-          <li class="user-list-item">
+          <li class="user-item-authorized">
             <a class="user-link user-link-login" href="#">Войти</a>
           </li>
           <li class="user-list-item">
-            <a class="user-link" href="#signup.html">Регистрация</a>
+            <a class="user-link user-link-signup" href="#">Регистрация</a>
           </li>
         </ul>
       </section>
@@ -127,36 +127,42 @@
       </div>
       <ul class="popular-products-list">
         <li class="popular-products-item">
-          <article class="item">
+          <a class="catalog-item-link" href="#">
             <h3>Перфоратор BOSCH BFG 9000</h3>
+            <img src="img/perforator-1.png" alt="Изображена модель перфоратора BOSCH BFG 9000">
+          </a>
+          <div class="price">
             <del>32500 P.</del>
             <span>25500 P.</span>
-            <img src="img/perforator-1.png" alt="Изображена модель перфоратора BOSCH BFG 9000">
-          </article>
+          </div>
           <div class="actions">
             <a href="#" class="buy">Купить</a>
             <a href="#" class="bookmark">В закладки</a>
           </div>
         </li>
         <li class="popular-products-item">
-          <article class="item">
+          <a class="catalog-item-link" href="#">
             <h3>Перфоратор BOSCH BFG 3000</h3>
+            <img src="img/perforator-2.png" alt="Изображена модель перфоратора BOSCH BFG 3000">
+          </a>
+          <div class="price">
             <del>22500 P.</del>
             <span>15500 P.</span>
-            <img src="img/perforator-2.png" alt="Изображена модель перфоратора BOSCH BFG 3000">
-          </article>
+          </div>
           <div class="actions">
             <a href="#" class="buy">Купить</a>
             <a href="#" class="bookmark">В закладки</a>
           </div>
         </li>
         <li class="popular-products-item">
-          <article class="item">
+          <a class="catalog-item-link" href="#">
             <h3>Перфоратор BOSCH BFG 6000</h3>
+            <img src="img/perforator-3.png" alt="Изображена модель перфоратора BOSCH BFG 6000">
+          </a>
+          <div class="price">
             <del>30500 P.</del>
             <span>25500 P.</span>
-            <img src="img/perforator-3.png" alt="Изображена модель перфоратора BOSCH BFG 6000">
-          </article>
+          </div>
           <div class="actions">
             <a href="#" class="buy">Купить</a>
             <a href="#" class="bookmark">В закладки</a>
@@ -164,11 +170,13 @@
         </li>
         <li class="popular-products-item">
           <span class="flag flag-new">новинка</span>
-          <article class="item">
+          <a class="catalog-item-link" href="#">
             <h3>Перфоратор BOSCH BFG 2000</h3>
-            <span>12500 P.</span>
             <img src="img/perforator-4.png" alt="Изображена модель перфоратора BOSCH BFG 2000">
-          </article>
+          </a>
+          <div class="price">
+            <span>12500 P.</span>
+          </div>
           <div class="actions">
             <a href="#" class="buy">Купить</a>
             <a href="#" class="bookmark">В закладки</a>
@@ -227,7 +235,7 @@
     <section class="service container">
       <h2>Сервисы</h2>
       <p>Хороший интернет-магазин отличается от плохого не только ценами!
-      Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+        Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
       <ul class="service-list">
         <li class="service-item">Доставка</li>
         <li class="service-item">Гарантия</li>
@@ -238,7 +246,7 @@
         <li class="service-slider-item">
           <h3>Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-          Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+            Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
         </li>
         <li class="service-slider-item">
           <h3>Гарантия</h3>
@@ -251,7 +259,7 @@
         <li class="service-slider-item">
           <h3>Кредит</h3>
           <p>Залезть в долговую яму стало проще!
-          Кредитные консультанты придут вам на помощь.</p>
+            Кредитные консультанты придут вам на помощь.</p>
           <a class="button service-button" href="#">Отправить заявку</a>
         </li>
         </ul>
@@ -348,15 +356,34 @@
     </footer>
     <section class="modal modal-write-us">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <div class="appointment">
-        <!-- Размечу позже -->
-      </div>
-      <span class="modal-close">x</span>
+      <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="modal-appointment">
+          <div class="modal-user-info">
+            <p>
+              <label for="user-name">Ваше имя:</label>
+              <input class="input" id="user-name" name="name" type="text" placeholder="Имя Фамилия">
+            </p>
+             <p>
+              <label for="user-email">Ваш e-mail:</label>
+              <input class="input" id="user-email" name="email" type="email" placeholder="email@example.com">
+            </p>
+          </div>
+          <textarea class="input" name="text" placeholder="В свободной форме"></textarea>
+        </div>
+        <div class="modal-submit">
+          <button class="button main-button modal-button" type="submit">Отправить</button>
+        </div>
+      </form>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <img src="img/map-popup.png" width="940" height="446" alt="Мы на карте">
-      <span class="modal-close">x</span>
+       <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
   </main>
 </body>
