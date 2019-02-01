@@ -13,7 +13,7 @@
         <div class="header-top-left">
           <a class="main-header-logo" href="index.html">Техномарт</a>
           <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-            <label class="visually-hidden" for="search">Поиск</label>
+            <label class="visually-hidden" for="search">Поиск по сайту</label>
             <input class="search-input" id="search" name="search" type="search" placeholder="Поиск:">
           </form>
         </div>
@@ -41,12 +41,12 @@
         <h2 class="visually-hidden">Личный профайл</h2>
         <ul class="user-list-unauthorized">
           <li class="user-item-unauthorized">
-            <a class="user-link user-link-info" href="#">
+            <a class="user-link user-link-info" href="#profile.html" title="Равшан Джамшутович">
               <span class="user-name">Равшан Джамшутович</span>
             </a>
           </li>
           <li class="user-item-unauthorized">
-            <a class="user-link user-link-logout" href="#">
+            <a class="user-link user-link-logout" href="#logout.html">
               <span class="visually-hidden">Выйти</span>
             </a>
           </li>
@@ -56,7 +56,7 @@
             <a class="user-link-account" href="#cart.html">Мои заказы</a>
           </li>
           <li class="user-item-account">
-            <a class="user-link-account" href="#">Личный кабинет</a>
+            <a class="user-link-account" href="#profile.html">Личный кабинет</a>
           </li>
         </ul>
       </section>
@@ -134,11 +134,11 @@
           <ul class="filter-list">
             <li class="filter-option">
               <label for="filter-battery">Аккумуляторные</label>
-              <input class="visually-hidden filter-input filter-input-radio" id="filter-battery" name="power" type="radio" checked>
+              <input class="visually-hidden filter-input filter-input-radio" id="filter-battery" name="power" type="radio" value="battery" checked>
             </li>
             <li class="filter-option">
               <label for="filter-networked">Сетевые</label>
-              <input class="visually-hidden filter-input filter-input-radio" id="filter-networked" name="power" type="radio">
+              <input class="visually-hidden filter-input filter-input-radio" id="filter-networked" name="power" type="radio" value="networked">
             </li>
           </ul>
         </fieldset>
@@ -153,8 +153,8 @@
         <li class="sort-list-item"><a href="#">По функционалу</a></li>
       </ul>
       <div class="pointers">
-        <a class="pointer-up pointer-current"><span class="visually-hidden">по возрастанию</span></a>
-        <a class="pointer-down" href="#"><span class="visually-hidden">по убыванию</span></a>
+        <a class="pointer-up pointer-current"><span class="visually-hidden">сортировка по возрастанию</span></a>
+        <a class="pointer-down" href="#"><span class="visually-hidden">сортировка по убыванию</span></a>
       </div>
     </section>
     <section class="catalog">
