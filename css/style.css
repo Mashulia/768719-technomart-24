@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -13,8 +13,25 @@ a {
   text-decoration: none;
 }
 
+.button {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #ee3643;
+  border-radius: 2px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #ca2c37;
+}
+
+.button:active {
+  background-color: #ba2732;
+}
+
 .main-header {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
 }
@@ -110,7 +127,7 @@ a {
   border: 3px solid #ffffff;
 }
 
-.contacts address {
+.contacts-header address {
   font-size: 14x;
   line-height: 24px;
   font-style: normal;
@@ -187,4 +204,367 @@ a {
 .main-nav-list-item a:active {
   color: rgba(255, 255, 255, 0.5);
   background-color: #1d2739;
+}
+
+.features {
+  color: #ffffff;
+}
+
+.features-list {
+  list-style: none;
+}
+
+.features-title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.features-item-material {
+  background-color: #ffbf47;
+}
+
+.features-item-instrument {
+  background-color: #3bbce3;
+}
+
+.features-item-technic {
+  background-color: #dc91d8;
+}
+
+.features-item-sale {
+  background-color: #8ed78f;
+}
+
+.features-item-delivery {
+  background-color: #ffc047;
+}
+
+.features-button {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.features-button:hover,
+.features-button:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.features-button:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.promo-sliders-inner {
+  background-color: #685c53;
+}
+
+.promo-sliders-list {
+  list-style: none;
+}
+
+.promo-sliders-title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.promo-sliders-item p {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.slider-picture {
+  width: 620px;
+  height: 266px;
+}
+
+.popular-products-header,
+.popular-manufacturers-header {
+  background-color: #f9f5f0;
+}
+
+.section-title {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #32425c;
+  text-transform: uppercase;
+}
+
+.popular-products-list {
+  list-style: none;
+}
+
+.popular-products-item,
+.popular-manufacturers-item {
+  border: 1px solid #eaeaea;
+}
+
+.popular-products-item:hover,
+.popular-manufacturers-item:hover {
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+.popular-products-item h3 {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.popular-products-item img {
+  width: 218px;
+  height: 170px;
+}
+
+.price {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.price del {
+  color: #a9a9a9;
+}
+
+.popular-products-button {
+  font-size: 17px;
+}
+
+.button-buy {
+  background-color: #63a63e;
+  box-shadow: inset  0 -3px #367315;
+}
+
+.button-buy:hover,
+.button-buy:focus {
+  background-color: #5fbb2d;
+}
+
+.button-buy:active {
+  background-color: #518534;
+  box-shadow: none;
+}
+
+.button-bookmark {
+  color: #32425c;
+  background-color: #ffffff;
+  border: 3px solid #63a63e;
+}
+
+.button-bookmark:hover,
+.button-bookmark:focus {
+  border-color: #32425c;
+  background-color: #ffffff;
+}
+
+.button-bookmark:active {
+  color: rgba(50, 66, 92, 0.3);
+  border-color: rgba(50, 66, 92, 0.3);
+}
+
+.popular-manufacturers-list {
+  list-style: none;
+}
+
+.popular-manufacturers-item:active {
+  box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
+}
+
+.popular-manufacturers-item:active img {
+  opacity: 0.5;
+}
+
+.service {
+  background-color: #f4f8fa;
+}
+
+.service-title {
+  color: #000000;
+}
+
+.service p,
+.about-us p,
+.contacts p {
+  font-family: "PT Sans", Arial, sans-serif;
+}
+
+.service-list {
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  list-style: none;
+  color: #ffffff;
+}
+
+.service-item button {
+  color: inherit;
+  border: none;
+  background-color: transparent;
+}
+
+.service-item button {
+  background-color: #32425c;
+  box-shadow: inset 0 1px #405069;
+}
+
+.service-item button:hover,
+.service-item button:focus {
+  background-color: #293449;
+}
+
+.service-item button:active,
+.service-item .active-slide {
+  color: #32425c;
+  background-color: #ffffff;
+  box-shadow: none;
+}
+
+.service-item .active-slide:hover,
+.service-item .active-slide:focus {
+  color: #32425c;
+  background-color: #ffffff;
+  box-shadow: none;
+}
+
+.service-slider-list {
+  list-style: none;
+}
+
+.service-slider-title {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.about-us-title,
+.contacts-title {
+  color: #000000;
+}
+
+.transport-company-list {
+  list-style: none;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.map-wrapper img {
+  width: 300px;
+  height: 158px;
+}
+
+.main-footer {
+  color: #ffffff;
+}
+
+.footer-top-wrapper {
+  font-size: 18px;
+  background-color: #32425c;
+}
+
+.contacts-footer a {
+  color: inherit;
+}
+
+.site-navigation-list,
+.products-navigation-list {
+  list-style: none;
+}
+
+.site-navigation-list a {
+  color: inherit;
+}
+
+.products-navigation-list a,
+.mail a,
+.footer-copyright a {
+  color: #ffda96;
+}
+
+.site-navigation-list a:hover,
+.site-navigation-list a:focus,
+.products-navigation-list a:hover,
+.products-navigation-list a:focus,
+.mail a:hover,
+.mail a:focus,
+.footer-copyright a:hover,
+.footer-copyright a:focus {
+  text-decoration: underline;
+}
+
+.site-navigation-list a:active {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+.products-navigation-list a:active {
+  color: rgba(255, 209, 128, 0.5);
+  text-decoration: none;
+}
+
+.mail a:active,
+.footer-copyright a:active {
+  color: #ee3643;
+  text-decoration: none;
+}
+
+.footer-bottom-wrapper {
+  font-size: 16px;
+  line-height: 18px;
+  background-color: #293449;
+}
+
+.footer-social-list {
+  list-style: none;
+}
+
+.social-button {
+  color: #ffffff;
+}
+
+.modal-write-us {
+  border-top: 7px solid #ee3643;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+}
+
+.write-us-form label {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.input {
+  border: 2px solid #dee3e4;
+  border-radius: 2px;
+}
+
+.input:placeholder {
+  line-height: 18px;
+  color: #a9a9a9;
+}
+
+.input:hover {
+  border-color: #b5b5b5;
+}
+
+.input:focus {
+  border-color: #ee3643;
+}
+
+.modal-submit {
+  background-color: #f4f4f4;
+}
+
+.modal-button {
+  border: none;
+}
+
+.modal-map {
+  box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.5);
+}
+
+.modal-map img {
+  width: 940px;
+  height: 446px;
 }
