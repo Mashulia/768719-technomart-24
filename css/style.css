@@ -535,7 +535,25 @@ a {
   font-weight: 700;
 }
 
-.price-controls input:placeholder {
+.price-controls input::-webkit-input-placeholder {
+  font-size: 17px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.price-controls input:-ms-input-placeholder {
+  font-size: 17px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.price-controls input::-ms-input-placeholder {
+  font-size: 17px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.price-controls input::placeholder {
   font-size: 17px;
   line-height: 18px;
   color: #000000;
@@ -744,7 +762,22 @@ a {
   border-radius: 2px;
 }
 
-.input:placeholder {
+.input::-webkit-input-placeholder {
+  line-height: 18px;
+  color: #a9a9a9;
+}
+
+.input:-ms-input-placeholder {
+  line-height: 18px;
+  color: #a9a9a9;
+}
+
+.input::-ms-input-placeholder {
+  line-height: 18px;
+  color: #a9a9a9;
+}
+
+.input::placeholder {
   line-height: 18px;
   color: #a9a9a9;
 }
