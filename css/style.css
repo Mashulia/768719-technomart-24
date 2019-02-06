@@ -908,12 +908,30 @@ input[type="checkbox"].visually-hidden {
   background-color: #32425c;
 }
 
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.company-info {
+  width: 330px;
+}
+
+.footer-navigation {
+  width: 550px;
+}
+
 .contacts-footer a {
   color: inherit;
 }
 
 .site-navigation-list,
 .products-navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -960,12 +978,38 @@ input[type="checkbox"].visually-hidden {
   background-color: #293449;
 }
 
+.footer-bottom {
+  display: flex;
+}
+
+.footer-copy {
+  margin-right: 150px;
+  width: 230px;
+}
+
 .footer-social-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-right: 115px;
+  padding: 0;
+  width: 130px;
   list-style: none;
 }
 
 .social-button {
   color: #ffffff;
+}
+
+.mail {
+  margin-right: 20px;
+  width: 140px;
+}
+
+.footer-copyright {
+  width: 140px;
+  text-align: center;
 }
 
 .modal-write-us {
