@@ -206,6 +206,10 @@ input[type="checkbox"].visually-hidden {
   background-color: #161d29;
 }
 
+.cart-link-full {
+  background-color: #ee3643;
+}
+
 .order-link {
   background-color: #63a63e;
 }
@@ -226,6 +230,7 @@ input[type="checkbox"].visually-hidden {
 .header-middle {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 .header-title {
@@ -263,6 +268,8 @@ input[type="checkbox"].visually-hidden {
 }
 
 .user-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -286,7 +293,18 @@ input[type="checkbox"].visually-hidden {
 }
 
 .user-list-account {
+  display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.user-item-account:first-child {
+  width: 110px;
+}
+
+..user-item-account:last-child {
+  width: 120px;
 }
 
 .user-link-account {
@@ -716,6 +734,8 @@ input[type="checkbox"].visually-hidden {
 }
 
 .breadcrumbs {
+  display: flex;
+  margin-bottom: 20px;
   font-family: "PT Sans", Arial, sans-serif;
   line-height: 18px;
   color: #000000;
@@ -733,10 +753,17 @@ input[type="checkbox"].visually-hidden {
 }
 
 .catalog-title {
+  padding: 35px 30px;
   background-color: #f2f6f8;
 }
 
+.catalog-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
 .filters {
+  width: 220px;
   font-family: "PT Sans", Arial, sans-serif;
   text-transform: uppercase;
 }
@@ -814,15 +841,35 @@ input[type="checkbox"].visually-hidden {
   border-color: #ee3643;
 }
 
+.catalog {
+  width: 700px;
+}
+
 .sort {
+  display: flex;
+  padding: 20px;
   font-family: "PT Sans", Arial, sans-serif;
   line-height: 18px;
   text-transform: uppercase;
   background-color: #f7f3ec;
 }
 
+.sort-title {
+  width: 140px;
+  margin-right: auto;
+}
+
 .sort-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 380px;
   list-style: none;
+}
+
+.pointers {
+  margin-left: auto;
+  width: 43px;
 }
 
 .sort-list-item a {
@@ -852,10 +899,26 @@ input[type="checkbox"].visually-hidden {
 }
 
 .catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
   list-style: none;
 }
 
+.catalog-list-item {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.catalog-list-item:nth-child(3n) {
+  margin-right: 0;
+}
+
 .pagination-list {
+  display: flex;
+  margin-bottom: 60px;
   font-family: "PT Sans", Arial, sans-serif;
   list-style: none;
 }
@@ -891,11 +954,15 @@ input[type="checkbox"].visually-hidden {
   border: 1px solid #e5e5e5;
 }
 
+.catalog-info {
+  padding: 70px;
+}
+
 .catalog-info-title {
   color: #000000;
 }
 
-.atalog-info-description {
+.catalog-info-description {
   font-family: "PT Sans", Arial, sans-serif;
 }
 
