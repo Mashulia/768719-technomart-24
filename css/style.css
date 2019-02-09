@@ -315,12 +315,16 @@ input[type="checkbox"].visually-hidden {
 .header-middle {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+  padding-top: 45px;
+  padding-bottom: 40px;
 }
 
 .header-title {
-  width: 300px;
-  text-align: center;
+  width: 250px;
+  margin: 0;
+  margin-top: 5px;
+  padding-left: 50px;
+  text-align: left;
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
@@ -329,14 +333,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .contacts-header {
-  width: 300px;
-}
-
-.phone {
-  font-size: 21px;
-  line-height: 21px;
-  color: #ee3643;
-  border: 3px solid #ffffff;
+  width: 270px;
 }
 
 .contacts-header address {
@@ -344,25 +341,71 @@ input[type="checkbox"].visually-hidden {
   line-height: 24px;
   font-style: normal;
   color: #32425c;
+  text-align: center;
+}
+
+.phone {
+  position: relative;
+  display: block;
+  margin-bottom: 3px;
+  padding: 10px 50px;
+  padding-left: 70px;
+  font-size: 21px;
+  line-height: 21px;
+  color: #ee3643;
+  border: 3px solid #ffffff;
+}
+
+.phone::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  width: 19px;
+  height: 19px;
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.contacts-header p {
+  margin: 0;
+  padding: 0;
 }
 
 .user {
-  width: 300px;
+  width: 280px;
   font-size: 21px;
   line-height: 21px;
 }
 
 .user-list {
+  display: flex;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .user-link {
+  display: block;
+  padding: 12px 25px;
   background-color: #ffffff;
   color: inherit;
 }
 
+.user-link-login {
+  display: flex;
+  padding-left: 12px;
+}
+
+.user-link-login span {
+  margin-left: 15px;
+}
+
+.user-link-login svg {
+  margin-top: 3px;
+}
 
 .user-link:hover,
 .user-link:focus {
@@ -375,6 +418,15 @@ input[type="checkbox"].visually-hidden {
 
 .user-list-authorized .user-link:hover {
   color: #000000;
+}
+
+.user-link-login:hover svg path,
+.user-link-login:focus svg path {
+  fill: #32425c;
+}
+
+.user-link-login:active svg path {
+  fill: #c5c5c5;
 }
 
 .user-list-account {
