@@ -314,15 +314,15 @@ input[type="checkbox"].visually-hidden {
 
 .header-middle {
   display: flex;
-  justify-content: space-between;
   padding-top: 45px;
   padding-bottom: 40px;
 }
 
 .header-title {
-  width: 250px;
+  width: 300px;
   margin: 0;
   margin-top: 5px;
+  margin-right: 20px;
   padding-left: 50px;
   text-align: left;
   font-size: 16px;
@@ -333,7 +333,8 @@ input[type="checkbox"].visually-hidden {
 }
 
 .contacts-header {
-  width: 270px;
+  width: 300px;
+  padding-right: 30px;
 }
 
 .contacts-header address {
@@ -375,8 +376,13 @@ input[type="checkbox"].visually-hidden {
 
 .user {
   width: 280px;
+  margin-left: auto;
   font-size: 21px;
   line-height: 21px;
+}
+
+.user-authorized {
+  width: 300px;
 }
 
 .user-list {
@@ -399,12 +405,12 @@ input[type="checkbox"].visually-hidden {
   padding-left: 12px;
 }
 
-.user-link-login span {
-  margin-left: 15px;
+.user-link svg {
+  margin-top: 4px;
 }
 
-.user-link-login svg {
-  margin-top: 3px;
+.user-link-login span {
+  margin-left: 15px;
 }
 
 .user-link:hover,
@@ -429,19 +435,69 @@ input[type="checkbox"].visually-hidden {
   fill: #c5c5c5;
 }
 
+.user-link-info {
+  width: 260px;
+  padding: 10px 20px 12px 14px;
+}
+
+.user-link-logout {
+  width: 40px;
+  padding: 12px 10px;
+}
+
+.user-link-info span {
+  margin-left: 8px;
+}
+
+.user-link-info:active span {
+  opacity: 0.3;
+}
+
+
+.user-link-info svg path,
+.user-link-logout svg path {
+  fill: #c5c5c5;
+}
+
+.user-link-info:hover svg path,
+.user-link-logout:hover svg path,
+.user-link-info:focus svg path,
+.user-link-logout:focus svg path {
+  fill: #32425c;
+}
+
+.user-link-info:active svg path,
+.user-link-logout:active svg path {
+  fill: #c5c5c5;
+}
+
+.user-list-authorized {
+  margin-bottom: 2px;
+}
+
 .user-list-account {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  padding-left: 19px;
   list-style: none;
 }
 
-.user-item-account:first-child {
-  width: 110px;
+.user-item-account:last-child {
+  position: relative;
+  margin-left: 31px;
 }
 
-..user-item-account:last-child {
-  width: 120px;
+.user-item-account:last-child::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -17px;
+  width: 4px;
+  height: 4px;
+  background-color: #32425c;
+  border-radius: 50%;
 }
 
 .user-link-account {
@@ -457,7 +513,8 @@ input[type="checkbox"].visually-hidden {
 }
 
 .user-link-account:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: #32425c;
+  opacity: 0.3;
 }
 
 .user-name {
@@ -465,7 +522,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .main-nav {
-  margin-bottom: 60px;
+  padding-bottom: 60px;
   line-height: 17px;
 }
 
@@ -474,7 +531,7 @@ input[type="checkbox"].visually-hidden {
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 0;
-  padding: 0;
+  padding: 0 22px;
   list-style: none;
   background-color: #32425c;
   -webkit-box-shadow: inset 0 -5px 0 #293449;
@@ -482,6 +539,8 @@ input[type="checkbox"].visually-hidden {
 }
 
 .main-nav-list-item a {
+  display: block;
+  padding: 20px 5px;
   color: #ffffff;
 }
 
