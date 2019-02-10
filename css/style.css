@@ -56,12 +56,13 @@ input[type="checkbox"].visually-hidden {
 }
 
 .button {
+  padding: 10px 25px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #ee3643;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .button:hover,
@@ -556,7 +557,7 @@ input[type="checkbox"].visually-hidden {
 .promo-block {
   position: relative;
   padding-top: 60px;
-  padding-bottom: 55px;
+  padding-bottom: 30px;
 }
 
 .features {
@@ -587,7 +588,7 @@ input[type="checkbox"].visually-hidden {
   width: 300px;
 }
 
-.features-item .flag{
+.flag{
   position:absolute;
   top:-1px;
   right:-1px;
@@ -597,7 +598,8 @@ input[type="checkbox"].visually-hidden {
   overflow:hidden;
   z-index:20;
 }
-.features-item .flag-new{
+
+.flag-new{
   background:url("../img/new-flag.png") no-repeat 0 0;
 }
 
@@ -684,7 +686,6 @@ input[type="checkbox"].visually-hidden {
 }
 
 .features-button {
-  padding: 10px 25px;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -866,10 +867,13 @@ input[type="checkbox"].visually-hidden {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  padding: 27px 25px 25px 28px;
   background-color: #f9f5f0;
 }
 
 .section-title {
+  flex-grow: 1;
+  margin: 0;
   text-align: left;
   font-size: 30px;
   line-height: 30px;
@@ -878,10 +882,10 @@ input[type="checkbox"].visually-hidden {
   text-transform: uppercase;
 }
 
-
 .popular-products-button,
 .popular-brands-button {
-  width: 300px;
+  align-items: flex-end;
+  width: 254px;
   text-align: center;
 }
 
@@ -901,6 +905,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .product-item {
+  position: relative;
   width: 220px;
 }
 
@@ -910,21 +915,37 @@ input[type="checkbox"].visually-hidden {
           box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
+.catalog-item-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 38px;
+}
+
 .product-item h3,
 .product-item h4 {
+  margin: 0;
+  width: 160px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
   color: #000000;
+  text-align: center;
 }
 
 .product-item img {
+  order: -1;
   width: 218px;
   height: 170px;
+  margin-bottom: 10px;
 }
 
 .price {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -932,10 +953,54 @@ input[type="checkbox"].visually-hidden {
 }
 
 .price del {
+  position: absolute;
+  top: -27px;
   color: #a9a9a9;
 }
 
-.button-buy {
+.price-button {
+  width: 130px;
+  margin-bottom: 20px;
+  padding-left: 35px;
+  font-size: 17px;
+}
+
+.price-button:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border: 19px solid white;
+  border-left-color: #ee3643;
+}
+
+.actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 218px;
+  height: 88px;
+  padding: 40px 0;
+  background-color: #ffffff;
+  z-index: 10;
+  text-align: center;
+}
+
+.product-item:hover .actions{
+    display:block;
+}
+
+.actions .button {
+  display: block;
+  width: 135px;
+  margin: 0 auto;
+}
+
+.actions .button-buy {
+  margin-bottom: 10px;
   background-color: #63a63e;
   -webkit-box-shadow: inset  0 -3px #367315;
           box-shadow: inset  0 -3px #367315;
@@ -982,9 +1047,14 @@ input[type="checkbox"].visually-hidden {
 }
 
 .popular-brands-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 220px;
+  height: 145px;
   margin-right: 20px;
   margin-bottom: 20px;
+
 }
 
 .popular-brands-item:nth-child(4n) {
@@ -1008,12 +1078,14 @@ input[type="checkbox"].visually-hidden {
 }
 
 .service-title {
+  margin-bottom: 25px;
   color: #000000;
 }
 
 .service-description,
 .about-us p,
 .contacts p {
+  margin: 0;
   font-family: "PT Sans", Arial, sans-serif;
 }
 
