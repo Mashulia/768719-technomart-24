@@ -108,14 +108,6 @@
       </section>
       <section class="promo-sliders">
         <h2 class="visually-hidden">Промо-предложения</h2>
-        <div class="switches">
-          <input type="radio" id="btn-1" name="toggle">
-          <input type="radio" id="btn-2" name="toggle" checked>
-        </div>
-        <div class="switches-controls">
-          <label for="btn-1"></label>
-          <label for="btn-2"></label>
-        </div>
         <div class="arrows-controls">
           <button class="arrows arrows-prev">
             <span class="visually-hidden">Предыдущий слайдер</span>
@@ -124,21 +116,29 @@
             <span class="visually-hidden">Следующий слайдер</span>
           </button>
         </div>
-        <div class="promo-sliders-inner">
-          <ul class="promo-sliders-list">
-            <li class="promo-sliders-item">
-              <h3 class="promo-sliders-title">Дрели</h3>
-              <p>Соседям на радость!</p>
-              <img class="slider-picture" src="img/slide-1.jpg" width="620" height="266" alt="Мужчина работающий дрелью">
-            </li>
-            <li class="promo-sliders-item">
+        <input class="visually-hidden" type="radio" id="product-1" name="toggle">
+        <input class="visually-hidden" type="radio" id="product-2" name="toggle" checked>
+        <div class="slider-controls">
+          <label class="slider-controls-item slider-controls-1" for="product-1">Первый</label>
+          <label class="slider-controls-item slider-controls-2" for="product-2">Второй</label>
+        </div>
+        <ul class="promo-sliders-list">
+          <li class="promo-sliders-item">
+            <div class="promo-sliders-header">
               <h3 class="promo-sliders-title">Перфораторы</h3>
               <p>Настоящие мужские игрушки</p>
-              <img class="slider-picture" src="img/slide-2.jpg" width="620" height="266" alt="Мужчина работающий перфоратором">
-            </li>
-          </ul>
-          <a class="button button-main sliders-button" href="catalog.html">Открыть каталог</a>
-        </div>
+            </div>
+            <img class="slider-picture" src="img/slide-2.jpg" width="620" height="266" alt="Мужчина работающий перфоратором">
+          </li>
+          <li class="promo-sliders-item">
+            <div class="promo-sliders-header">
+              <h3 class="promo-sliders-title">Дрели</h3>
+              <p>Соседям на радость!</p>
+            </div>
+            <img class="slider-picture" src="img/slide-1.jpg" width="620" height="266" alt="Мужчина работающий дрелью">
+          </li>
+        </ul>
+        <a class="button button-main sliders-button" href="catalog.html">Открыть каталог</a>
       </section>
     </div>
     <section class="popular-products container">
