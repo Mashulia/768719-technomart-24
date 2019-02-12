@@ -1348,15 +1348,19 @@ input[type="checkbox"].visually-hidden {
   text-transform: uppercase;
 }
 
-.filters-title {
+.filter-title,
+.sort-title {
   margin: 0;
-  margin-bottom: 11px;
-  padding: 10px 20px;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
   background-color: #f7f3ec;
   border-radius: 3px;
+}
+
+.filter-title {
+  margin-bottom: 11px;
+  padding: 10px 20px;
 }
 
 .form-group {
@@ -1606,35 +1610,78 @@ input[type="checkbox"].visually-hidden {
 
 .sort {
   display: flex;
-  padding: 20px;
+  padding: 10px 17px 10px 19px;
+  margin-bottom: 11px;
   font-family: "PT Sans", Arial, sans-serif;
   line-height: 18px;
   text-transform: uppercase;
   background-color: #f7f3ec;
+  border-radius: 3px;
 }
 
 .sort-title {
+  justify-content: flex-start;
   width: 140px;
-  margin-right: auto;
+  margin-right: 80px;;
 }
 
 .sort-list {
   display: flex;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
-  width: 380px;
+  width: 355px;
   list-style: none;
 }
 
-.pointers {
+.pointers-wrapper {
+  display: flex;
+  justify-content: space-between;
   margin-left: auto;
-  width: 43px;
+  margin-top: 2px;
+  width: 42px;
+}
+
+.pointer {
+  width: 0;
+  height: 0;
+  border-left: 5px solid  transparent;
+  border-right: 5px solid transparent;
+}
+
+.pointer-up {
+  border-top: 10px solid #c5c5c5;
+}
+
+.pointer-down {
+  border-bottom: 10px solid #c5c5c5;
+}
+
+.pointer-current {
+  border-top-color: #ee3643;
+  border-bottom-color: #ee3643;
+}
+
+.pointer-up:hover,
+.pointer-up:focus {
+  border-top-color: #000000;
+}
+
+.pointer-down:hover,
+.pointer-down:focus {
+  border-bottom-color: #000000;
+}
+
+.pointer-current:hover,
+.pointer-current:focus {
+  border-top-color: #ee3643;
+  border-bottom-color: #ee3643;
 }
 
 .sort-list-item a {
   color: inherit;
   opacity: 0.3;
-  border-bottom: 1px dashed #ee3643;
+  border-bottom: 1px dotted #ee3643;
 }
 
 .sort-list-item a:hover,
@@ -1643,18 +1690,14 @@ input[type="checkbox"].visually-hidden {
   border-bottom-style: solid;
 }
 
-.sort-list-item a:active {
-  color: #ee3643;
-  border: none;
-}
-
 .sort-list-item-current a {
   opacity: 1;
   color: #ee3643;
+  border-bottom: none;
 }
 
 .sort-list-item-current a:hover {
-  border-bottom: 1px dashed #ee3643;
+  border-bottom: none;
 }
 
 .catalog-list {
