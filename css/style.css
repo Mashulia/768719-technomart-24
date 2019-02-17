@@ -31,7 +31,8 @@ img {
 }
 
 .visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden {
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -173,8 +174,8 @@ input[type="checkbox"].visually-hidden {
   color: #ffffff;
 }
 
-.search-input:hover .header-top-wrapper,
-.search-button:hover .header-top-wrapper{
+.search-input:hover,
+.search-button:hover {
   background-color: #212a3a;
 }
 
@@ -287,8 +288,8 @@ input[type="checkbox"].visually-hidden {
   opacity: 0.5;
 }
 
-.header-top-link:hover .header-top-wrapper,
-.header-top-link:focus .header-top-wrapper {
+.header-top-link:hover,
+.header-top-link:focus {
   background-color: #212a3a;
 }
 
@@ -1058,7 +1059,7 @@ input[type="checkbox"].visually-hidden {
   width: 218px;
   height: 130px;
   padding: 40px 0;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.9);
   z-index: 10;
   text-align: center;
 }
@@ -1189,14 +1190,6 @@ input[type="checkbox"].visually-hidden {
   width: 400px;
 }
 
-.shadow {
-  position: absolute;
-  z-index: 5;
-  background-image: url("../img/shadow.png");
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .service-slider-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1207,6 +1200,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .service-list {
+  position: relative;
   width: 240px;
   margin: 0;
   padding: 0;
@@ -1215,6 +1209,19 @@ input[type="checkbox"].visually-hidden {
   font-weight: 700;
   list-style: none;
   color: #ffffff;
+}
+
+.service-list::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: 0;
+  z-index: 5;
+  width: 10px;
+  height: 280px;
+  background-image: url("../img/shadow.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .service-item button {
@@ -1268,6 +1275,7 @@ input[type="checkbox"].visually-hidden {
 .service-slider-delivery {
   background-image: url("../img/delivery.png");
   background-position: 150px 25px;
+  background-repeat: no-repeat;
 }
 
 .service-slider-guarantee {
@@ -1918,6 +1926,8 @@ input[type="checkbox"].visually-hidden {
 
 .button-pagination-next {
   width: 140px;
+  padding-right: 30px;
+  padding-left: 30px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   color: #000000;
