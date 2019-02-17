@@ -1165,6 +1165,46 @@ input[type="radio"].visually-hidden {
   opacity: 0.5;
 }
 
+.popular-brands-bosh img {
+  width: 126px;
+   height: 37px;
+}
+
+.popular-brands-makita img {
+  width: 123px;
+   height: 40px;
+}
+
+.popular-brands-deWalt img {
+  width: 146px;
+   height: 44px;
+}
+
+.popular-brands-interscol img {
+  width: 184px;
+   height: 32px;
+}
+
+.popular-brands-hitachi img {
+  width: 169px;
+   height: 31px;
+}
+
+.popular-brands-lg img {
+  width: 121px;
+   height: 73px;
+}
+
+.popular-brands-aeg img {
+  width: 151px;
+   height: 96px;
+}
+
+.popular-brands-metabo img {
+  width: 204px;
+   height: 69px;
+}
+
 .service {
   position: relative;
   margin-bottom: 80px;
@@ -1218,7 +1258,7 @@ input[type="radio"].visually-hidden {
   right: 0;
   z-index: 5;
   width: 10px;
-  height: 280px;
+  height: 279px;
   background-image: url("../img/shadow.png");
   background-position: 0 0;
   background-repeat: no-repeat;
