@@ -270,7 +270,7 @@
           </ul>
           <div class="service-sliders-inner">
             <ul class="service-slider-list">
-            <li class="service-slider-item service-slider-delivery service-slider-active">
+            <li class="service-slider-item service-slider-delivery">
               <h3 class="section-title service-slider-title">Доставка</h3>
               <p class="delivery-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!<br> Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
             </li>
@@ -282,7 +282,7 @@
                 сгоревший товар на новый.<br>
                 Дом уж восстановите как-нибудь сами.</p>
             </li>
-            <li class="service-slider-item service-slider-credit">
+            <li class="service-slider-item service-slider-credit service-slider-active">
               <h3 class="section-title service-slider-title">Кредит</h3>
               <p class="credit-description">Залезть в долговую яму стало проще!<br>
                 Кредитные консультанты придут вам на помощь.</p>
@@ -406,10 +406,15 @@
             <input class="input" id="user-email" name="email" type="email" placeholder="email@example.com">
           </p>
         </div>
-        <textarea class="input" name="text" placeholder="В свободной форме"></textarea>
-      </div>
-      <div class="modal-submit">
-        <button class="button main-button modal-button" type="submit">Отправить</button>
+        <div class="text">
+          <label for="user-text">Текст письма</label>
+          <textarea class="input" id="user-text" name="text" placeholder="В свободной форме"></textarea>
+          </label>
+        </div>
+        <div class="modal-button-wrapper">
+        <div class="modal-submit">
+          <button class="button main-button modal-button" type="submit">Отправить</button>
+        </div>
       </div>
     </form>
     <button class="modal-close" type="button">
