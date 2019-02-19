@@ -2366,6 +2366,11 @@ input[type="radio"].visually-hidden {
           box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
 }
 
+.map-show {
+  display: block;
+  animation: bounce 0.5s;
+}
+
 .modal-map img {
   width: 940px;
   height: 448px;
