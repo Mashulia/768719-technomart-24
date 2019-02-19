@@ -2218,7 +2218,8 @@ input[type="radio"].visually-hidden {
 }
 
 .modal {
-  position: absolute;
+  position: fixed;
+  left: 50%;
 }
 
 .modal p {
@@ -2228,24 +2229,18 @@ input[type="radio"].visually-hidden {
 
 .modal-write-us {
   display: none;
-  top: 2520px;
   width: 620px;
-  margin-left: 410px;
+  top: 185px;;
+  margin-left: -310px;;
   background-color: #ffffff;
   border-top: 7px solid #ee3643;
   -webkit-box-shadow: 0 20px 55px rgba(0, 0, 0, 0.75);
           box-shadow: 0 20px 55px rgba(0, 0, 0, 0.75);
 }
 
-.modal-show {
-  display: block;
-  animation: bounce 0.6s;
-}
-
 .modal-error {
   animation: shake 0.6s;
 }
-
 
 .modal-user-info {
   display: flex;
@@ -2327,6 +2322,7 @@ input[type="radio"].visually-hidden {
 
 .modal-close {
   position: absolute;
+  z-index: 10;
   top: 9px;
   right: 13px;
   width: 21px;
@@ -2357,8 +2353,7 @@ input[type="radio"].visually-hidden {
 
 .modal-map {
   display: none;
-  left: 50%;
-  top: 2347px;
+  top: 10px;;
   margin-left: -470px;
   width: 940px;
   height: 448px;
@@ -2366,14 +2361,23 @@ input[type="radio"].visually-hidden {
           box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
 }
 
-.map-show {
-  display: block;
-  animation: bounce 0.5s;
+.map {
+  position: relative;
+  height: 448px;
+  overflow: hidden;
 }
 
 .modal-map img {
+  position: absolute;
+  z-index: 4;
   width: 940px;
   height: 448px;
+}
+
+.modal-map iframe {
+  position: absolute;
+  z-index: 5;
+  border: none;
 }
 
 .modal-map .modal-close {
@@ -2381,13 +2385,19 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-cart {
+  display: none;
   top: 410px;
   width: 620px;
-  margin-left: 410px;
+  margin-left: -310px;
   background-color: #ffffff;
   border-top: 7px solid #ee3643;
   -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
 }
 
 .cart-top {
@@ -2438,7 +2448,6 @@ input[type="radio"].visually-hidden {
 .cart-button,
 .modal-close-button {
   width: 220px;
-
 }
 
 .modal-close-button {
