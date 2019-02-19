@@ -110,10 +110,10 @@
       <section class="promo-sliders">
         <h2 class="visually-hidden">Промо-предложения</h2>
         <div class="arrows-controls">
-          <button class="arrows arrows-prev">
+          <button class="arrows arrows-prev js-slider">
             <span class="visually-hidden">Предыдущий слайдер</span>
           </button>
-          <button class="arrows arrows-next">
+          <button class="arrows arrows-next js-slider">
             <span class="visually-hidden">Следующий слайдер</span>
           </button>
         </div>
@@ -262,34 +262,32 @@
         <div class="service-slider-wrapper">
           <ul class="service-list">
             <li class="service-item">
-              <button class="active-slide" type="button">Доставка</button></li>
+              <button class="button-delivery active-slide" type="button">Доставка</button></li>
             <li class="service-item">
-              <button type="button">Гарантия</button></li>
+              <button class="button-guarantee" type="button">Гарантия</button></li>
             <li class="service-item">
-              <button type="button">Кредит</button></li>
+              <button class="button-credit" type="button">Кредит</button></li>
           </ul>
-          <div class="service-sliders-inner">
-            <ul class="service-slider-list">
-            <li class="service-slider-item service-slider-delivery">
-              <h3 class="section-title service-slider-title">Доставка</h3>
-              <p class="delivery-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!<br> Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
-            </li>
-            <li class="service-slider-item service-slider-guarantee">
-              <h3 class="section-title service-slider-title">Гарантия</h3>
-              <p class="guarantee-description">Если купленный у нас товар поломается или заискрит,<br>
-                а также в случае пожара, спровоцированного его возгоранием,<br>
-                вы всегда можете быть уверены в нашей гарантии. Мы обменяем
-                сгоревший товар на новый.<br>
-                Дом уж восстановите как-нибудь сами.</p>
-            </li>
-            <li class="service-slider-item service-slider-credit service-slider-active">
-              <h3 class="section-title service-slider-title">Кредит</h3>
-              <p class="credit-description">Залезть в долговую яму стало проще!<br>
-                Кредитные консультанты придут вам на помощь.</p>
-              <a class="button service-button" href="#">Отправить заявку</a>
-            </li>
-            </ul>
-          </div>
+          <ul class="service-slider-list">
+          <li class="service-slider-item service-slider-delivery">
+            <h3 class="section-title service-slider-title">Доставка</h3>
+            <p class="delivery-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!<br> Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
+          </li>
+          <li class="service-slider-item service-slider-guarantee service-slider-none">
+            <h3 class="section-title service-slider-title">Гарантия</h3>
+            <p class="guarantee-description">Если купленный у нас товар поломается или заискрит,<br>
+              а также в случае пожара, спровоцированного его возгоранием,<br>
+              вы всегда можете быть уверены в нашей гарантии. Мы обменяем
+              сгоревший товар на новый.<br>
+              Дом уж восстановите как-нибудь сами.</p>
+          </li>
+          <li class="service-slider-item service-slider-credit service-slider-none">
+            <h3 class="section-title service-slider-title">Кредит</h3>
+            <p class="credit-description">Залезть в долговую яму стало проще!<br>
+              Кредитные консультанты придут вам на помощь.</p>
+            <a class="button service-button" href="#">Отправить заявку</a>
+          </li>
+          </ul>
         </div>
       </div>
     </section>
