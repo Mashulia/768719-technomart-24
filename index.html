@@ -110,18 +110,14 @@
       <section class="promo-sliders">
         <h2 class="visually-hidden">Промо-предложения</h2>
         <div class="arrows-controls">
-          <button class="arrows arrows-prev">
-            <span class="visually-hidden">Предыдущий слайдер</span>
+          <button class="arrows arrows-prev" aria-label="Предыдущий слайдер">
           </button>
-          <button class="arrows arrows-next">
-            <span class="visually-hidden">Следующий слайдер</span>
+          <button class="arrows arrows-next" aria-label="Следующий слайдер">
           </button>
         </div>
-        <input class="visually-hidden" type="radio" id="product-1" name="toggle">
-        <input class="visually-hidden" type="radio" id="product-2" name="toggle" checked>
-        <div class="slider-controls">
-          <label class="slider-controls-item slider-controls-1" for="product-1">Первый</label>
-          <label class="slider-controls-item slider-controls-2" for="product-2">Второй</label>
+        <div class="promo-sliders-pointers">
+          <span class="pointer-item"></span>
+          <span class="pointer-item pointer-item-current"></span>
         </div>
         <ul class="promo-sliders-list">
           <li class="promo-sliders-item">
@@ -131,7 +127,7 @@
             </div>
             <img class="slider-picture" src="img/slide-2.jpg" width="620" height="266" alt="Мужчина работающий перфоратором">
           </li>
-          <li class="promo-sliders-item">
+          <li class="promo-sliders-item promo-sliders-active">
             <div class="promo-sliders-header">
               <h3 class="promo-sliders-title">Дрели</h3>
               <p>Соседям на радость!</p>

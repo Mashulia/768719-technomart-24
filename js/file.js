@@ -1,3 +1,35 @@
+var arrowsButon = document.querySelectorAll(".arrows");
+var promoSlider = document.querySelectorAll(".promo-sliders-item");
+var activeSlide = document.querySelectorAll(".pointer-item");
+var currentIndex = 0;
+
+for (var i = 0; i < arrowsButon.length; i++) {
+  arrowsButon[i].addEventListener('click', function (e) {
+    slideShow(e.target.attributes[1].textContent);
+  })
+};
+
+function clearClassSlider() {
+  for (var i = 0; i < promoSlider.length; i++) {
+    promoSlider[i].classList.remove("promo-sliders-active");
+    activeSlide[i].classList.remove("pointer-item-current");
+  }
+};
+
+function slideShow(textContent) {
+  if (textContent === "Предыдущий слайдер") {
+    currentIndex = (currentIndex + 1) % promoSlider.length;
+  } else if (textContent === "Следующий слайдер") {
+    currentIndex = (currentIndex - 1) % promoSlider.length;
+    if (currentIndex === -1) {
+      currentIndex = promoSlider.length - 1;
+    }
+  };
+
+  clearClassSlider();
+  promoSlider[currentIndex].classList.add("promo-sliders-active");
+  activeSlide[currentIndex].classList.add("pointer-item-current");
+};
 var btnDelivery = document.querySelector(".button-delivery");
 var btnGuarantee = document.querySelector(".button-guarantee");
 var btnCredit = document.querySelector(".button-credit");
@@ -45,7 +77,8 @@ var isStorageSupport = true;
 var storage = "";
 var smallMap = document.querySelector(".small-map");
 var bigMap  = document.querySelector(".modal-map");
-var mapClose = bigMap.querySelector(".modal-close");
+var link = document.querySelectorAll(".button-buy");
+var cart = document.querySelector(".modal-cart");
 
 try {
   storage = localStorage.getItem("name");
@@ -67,18 +100,22 @@ writeButton.addEventListener("click", function (evt) {
 
 smallMap.addEventListener("click", function (evt) {
     evt.preventDefault();
-    bigMap.classList.add("map-show");
+    bigMap.classList.add("modal-show");
+});
+
+link.addEventListener("click", function(evt) {
+  if (evt.target.classList.contains("active-buy")) {
+  cart.classList.add("modal-show");
+  closeAddProduct.focus();
+  }
 });
 
 close.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove("modal-show");
     popup.classList.remove("modal-error");
-  });
-
-mapClose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    bigMap.classList.remove("map-show");
+    bigMap.classList.remove("modal-show");
+    cart.classList.remove("modal-show");
   });
 
 form.addEventListener("submit", function (evt) {
@@ -100,9 +137,13 @@ window.addEventListener("keydown", function (evt) {
         popup.classList.remove("modal-show");
         popup.classList.remove("modal-error");
       }
-      if (bigMap.classList.contains("map-show")) {
-        bigMap.classList.remove("map-show");
+      if (bigMap.classList.contains("modal-show")) {
+        bigMap.classList.remove("modal-show");
+      }
+      if (cart.classList.contains("modal-show")) {
+        cart.classList.remove("modal-show");
       }
     }
   });
+
 
