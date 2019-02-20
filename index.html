@@ -258,18 +258,18 @@
         <div class="service-slider-wrapper">
           <ul class="service-list">
             <li class="service-item">
-              <button class="button-delivery active-slide" type="button">Доставка</button></li>
+              <button class="slide-button active-button" type="button">Доставка</button></li>
             <li class="service-item">
-              <button class="button-guarantee" type="button">Гарантия</button></li>
+              <button class="slide-button" type="button">Гарантия</button></li>
             <li class="service-item">
-              <button class="button-credit" type="button">Кредит</button></li>
+              <button class="slide-button" type="button">Кредит</button></li>
           </ul>
           <ul class="service-slider-list">
-          <li class="service-slider-item service-slider-delivery">
+          <li class="service-slider-item service-slider-delivery service-slider-active">
             <h3 class="section-title service-slider-title">Доставка</h3>
             <p class="delivery-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!<br> Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
           </li>
-          <li class="service-slider-item service-slider-guarantee service-slider-none">
+          <li class="service-slider-item service-slider-guarantee">
             <h3 class="section-title service-slider-title">Гарантия</h3>
             <p class="guarantee-description">Если купленный у нас товар поломается или заискрит,<br>
               а также в случае пожара, спровоцированного его возгоранием,<br>
@@ -277,7 +277,7 @@
               сгоревший товар на новый.<br>
               Дом уж восстановите как-нибудь сами.</p>
           </li>
-          <li class="service-slider-item service-slider-credit service-slider-none">
+          <li class="service-slider-item service-slider-credit">
             <h3 class="section-title service-slider-title">Кредит</h3>
             <p class="credit-description">Залезть в долговую яму стало проще!<br>
               Кредитные консультанты придут вам на помощь.</p>
@@ -422,6 +422,21 @@
       <img src="img/map-popup.jpg" width="940" height="446" alt="Мы на карте">
     </div>
      <button class="modal-close" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+  </section>
+  <section class="modal modal-cart">
+    <div class="cart-top">
+      <span class="product-checked"></span>
+      <h2 class="section-title cart-title">Товар добавлен в корзину</h2>
+    </div>
+    <div class="cart-bottom">
+      <div class="cart-action">
+        <a class="button cart-button" href="cart.html">Оформить заказ</a>
+        <button class="button modal-close-button" type="button">Продолжить покупки</button>
+      </div>
+    </div>
+    <button class="modal-close" type="button">
       <span class="visually-hidden">Закрыть</span>
     </button>
   </section>
