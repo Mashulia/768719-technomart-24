@@ -105,6 +105,8 @@ input[type="radio"].visually-hidden {
 }
 
 .header-top-left {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   width: 460px;
 }
 
@@ -832,9 +834,15 @@ input[type="radio"].visually-hidden {
 
 .promo-sliders-pointers {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   left: 50%;
   bottom: 37px;
   z-index: 100;
@@ -847,6 +855,7 @@ input[type="radio"].visually-hidden {
 .pointer-item {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   width: 10px;
   height: 10px;
   margin: 0 5px;
@@ -948,9 +957,6 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0;
@@ -967,6 +973,11 @@ input[type="radio"].visually-hidden {
 .product-item {
   position: relative;
   width: 220px;
+  margin-right: 20px;
+}
+
+.product-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .product-item:hover,
@@ -1102,7 +1113,6 @@ input[type="radio"].visually-hidden {
 }
 
 .button-bookmark {
-
   color: #32425c;
   background-color: #ffffff;
   border: 3px solid #63a63e;
@@ -1110,13 +1120,7 @@ input[type="radio"].visually-hidden {
 
 .button-bookmark:hover,
 .button-bookmark:focus {
-  border-color: #32425c;
-  background-color: #ffffff;
-}
-
-.button-bookmark:active {
-  color: rgba(50, 66, 92, 0.3);
-  border-color: rgba(50, 66, 92, 0.3);
+  border-color: transparent;
 }
 
 .popular-brands {
@@ -1746,7 +1750,6 @@ input[type="radio"].visually-hidden {
   height: 25px;
   border: 3px solid #c5c5c5;
   border-radius: 50%;
-
 }
 
 .filter-input-radio:checked + label::after {
@@ -2185,28 +2188,55 @@ input[type="radio"].visually-hidden {
   width: 110px;
 }
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
   0% {
-    transform: translateY(-2000px);
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
   }
 
   70% {
-    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
   }
 
   90% {
-    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
 
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
-@keyframes shake {
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shake {
   0%,
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 
   10%,
@@ -2214,14 +2244,41 @@ input[type="radio"].visually-hidden {
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
   }
 }
 
@@ -2246,13 +2303,13 @@ input[type="radio"].visually-hidden {
           box-shadow: 0 20px 55px rgba(0, 0, 0, 0.75);
 }
 
-.modal-error {
-  animation: shake 0.6s;
-}
-
 .modal-user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0 80px;
   padding-top: 47px;
   margin-bottom: 21px;
@@ -2337,6 +2394,7 @@ input[type="radio"].visually-hidden {
   height: 21px;
   font-size: 0;
   border: none;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -2352,11 +2410,15 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-close::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .modal-close::after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .modal-map {
@@ -2406,13 +2468,25 @@ input[type="radio"].visually-hidden {
 
 .modal-show {
   display: block;
-  animation: bounce 0.6s;
+  -webkit-animation: bounce 0.6s;
+          animation: bounce 0.6s;
+}
+
+.modal-error {
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 
 .cart-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 48px 80px;
 }
 
@@ -2434,9 +2508,9 @@ input[type="radio"].visually-hidden {
   height: 23px;
   border-left: 7px solid #ffffff;
   border-bottom: 7px solid #ffffff;
-  border-bottom-radius: 1px;
-  border-bottom-left-radius: 1px;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .cart-title {
@@ -2449,8 +2523,12 @@ input[type="radio"].visually-hidden {
 }
 
 .cart-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 40px 80px 35px 80px;
 }
 
