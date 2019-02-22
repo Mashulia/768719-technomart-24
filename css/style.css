@@ -1296,7 +1296,8 @@ input[type="radio"].visually-hidden {
 .service-slide-button-2:checked ~ .service-list .slide-button-2,
 .service-slide-button-3:checked ~ .service-list .slide-button-3 {
   color: #3d546e;
-  box-shadow: 0px 1px 0 0 rgb(255, 255, 255), inset 0px 1px 0 0 rgb(255, 255, 255);
+  -webkit-box-shadow: 0px 1px 0 0 rgb(255, 255, 255), inset 0px 1px 0 0 rgb(255, 255, 255);
+          box-shadow: 0px 1px 0 0 rgb(255, 255, 255), inset 0px 1px 0 0 rgb(255, 255, 255);
   background-color: rgb(255, 255, 255);
   border: none;
 }
@@ -2290,6 +2291,7 @@ input[type="radio"].visually-hidden {
 
 .modal {
   position: fixed;
+  z-index: 100;
   left: 50%;
 }
 
@@ -2393,7 +2395,7 @@ input[type="radio"].visually-hidden {
 
 .modal-close {
   position: absolute;
-  z-index: 10;
+  z-index: 1000;
   top: 9px;
   right: 13px;
   width: 21px;
@@ -2445,14 +2447,14 @@ input[type="radio"].visually-hidden {
 
 .modal-map img {
   position: absolute;
-  z-index: 4;
+  z-index: 10;
   width: 940px;
   height: 448px;
 }
 
 .modal-map iframe {
   position: absolute;
-  z-index: 5;
+  z-index: 20;
   border: none;
 }
 

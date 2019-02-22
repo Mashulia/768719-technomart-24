@@ -2,7 +2,7 @@ var writeButton = document.querySelector(".write-us-button");
 var popup = document.querySelector(".modal-write-us");
 var closeWriteUs = popup.querySelector(".modal-close");
 var form = popup.querySelector("form");
-var name = popup.querySelector("[name=name]");
+var userName = popup.querySelector("[name=user-name]");
 var email = popup.querySelector("[name=email]");
 var isStorageSupport = true;
 var storage = "";
@@ -14,7 +14,7 @@ var cartPopup = document.querySelector(".modal-cart");
 var closeBuy = cartPopup.querySelector(".modal-close");
 
 try {
-  storage = localStorage.getItem("name");
+  storage = localStorage.getItem("userName");
 } catch (err) {
   isStorageSupport = false;
 }
@@ -24,10 +24,10 @@ writeButton.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("modal-show");
     if (storage) {
-      name.value = storage;
+      userName.value = storage;
       email.focus();
     } else {
-      name.focus();
+      userName.focus();
     }
   });
 
@@ -44,14 +44,13 @@ for (var i = 0; i < buyButton.length; i++) {
 };
 
 form.addEventListener("submit", function (evt) {
-    if (!name.value || !email.value) {
+    if (!userName.value || !email.value) {
       evt.preventDefault();
       popup.classList.remove("modal-error");
       popup.offsetWidth = popup.offsetWidth;
       popup.classList.add("modal-error");
     } else if (isStorageSupport) {
-      localStorage.setItem("name", name.value);
-      localStorage.setItem("email", email.value);
+      localStorage.setItem("user-name", userName.value);
     }
   });
 
