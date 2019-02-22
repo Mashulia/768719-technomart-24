@@ -1,8 +1,3 @@
-var arrowsButon = document.querySelectorAll(".arrows");
-var promoSlider = document.querySelectorAll(".promo-sliders-item");
-var activeSlide = document.querySelectorAll(".pointer-item");
-var serviceButton = document.querySelectorAll(".slide-button");
-var serviceSlider = document.querySelectorAll(".service-slider-item");
 var writeButton = document.querySelector(".write-us-button");
 var popup = document.querySelector(".modal-write-us");
 var closeWriteUs = popup.querySelector(".modal-close");
@@ -17,73 +12,13 @@ var closeMap = bigMap.querySelector(".modal-close");
 var buyButton = document.querySelectorAll(".button-buy");
 var cartPopup = document.querySelector(".modal-cart");
 var closeBuy = cartPopup.querySelector(".modal-close");
-var currentIndex = 0;
-
-for (var i = 0; i < arrowsButon.length; i++) {
-  arrowsButon[i].addEventListener('click', function (e) {
-    slideShow(e.target.attributes[1].textContent);
-  })
-};
-
-function clearClassSlider() {
-  for (var i = 0; i < promoSlider.length; i++) {
-    promoSlider[i].classList.remove("promo-sliders-active");
-    activeSlide[i].classList.remove("pointer-item-current");
-  }
-};
-
-function slideShow(textContent) {
-  if (textContent === "Предыдущий слайдер") {
-    currentIndex = (currentIndex + 1) % promoSlider.length;
-  } else if (textContent === "Следующий слайдер") {
-    currentIndex = (currentIndex - 1) % promoSlider.length;
-    if (currentIndex === -1) {
-      currentIndex = promoSlider.length - 1;
-    }
-  };
-
-  clearClassSlider();
-  promoSlider[currentIndex].classList.add("promo-sliders-active");
-  activeSlide[currentIndex].classList.add("pointer-item-current");
-};
-
-
-function clearClassService() {
-  for (var i = 0; i < serviceSlider.length; i++) {
-    serviceButton[i].classList.remove("active-button");
-    serviceSlider[i].classList.remove("service-slider-active");
-  }
-};
-
-for (var i = 0; i < serviceButton.length; i++) {
-  serviceButton[i].addEventListener("click", function (evt) {
-    serviceShow(evt.target.textContent);
-  })
-};
-
-function serviceShow(textContent) {
-  clearClassService();
-
-  if (textContent === "Доставка") {
-    serviceButton[0].classList.add("active-button");
-    serviceSlider[0].classList.add("service-slider-active");
-  }
-  if (textContent === "Гарантия") {
-    serviceButton[1].classList.add("active-button");
-    serviceSlider[1].classList.add("service-slider-active");
-  }
-  if (textContent === "Кредит") {
-    serviceButton[2].classList.add("active-button");
-    serviceSlider[2].classList.add("service-slider-active");
-  }
-};
 
 try {
   storage = localStorage.getItem("name");
-  storage = localStorage.getItem("email");
 } catch (err) {
   isStorageSupport = false;
 }
+
 
 writeButton.addEventListener("click", function (evt) {
     evt.preventDefault();

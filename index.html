@@ -109,15 +109,15 @@
       </section>
       <section class="promo-sliders">
         <h2 class="visually-hidden">Промо-предложения</h2>
-        <div class="arrows-controls">
-          <button class="arrows arrows-prev" aria-label="Предыдущий слайдер">
-          </button>
-          <button class="arrows arrows-next" aria-label="Следующий слайдер">
-          </button>
-        </div>
+        <input class="visually-hidden" type="radio" id="product-1" name="toggle">
+        <input class="visually-hidden" type="radio" id="product-2" name="toggle" checked>
         <div class="promo-sliders-pointers">
-          <span class="pointer-item"></span>
-          <span class="pointer-item pointer-item-current"></span>
+          <label class="pointer-item pointer-item-1" for="product-1">Первый слайдер</label>
+          <label class="pointer-item pointer-item-2" for="product-2">Второй слайдер</label>
+        </div>
+        <div class="arrows-controls">
+          <label class="arrows arrows-prev" for="product-1" aria-label="Предыдущий слайдер"></label>
+          <label class="arrows arrows-next" for="product-2" aria-label="Следующий слайдер"></label>
         </div>
         <ul class="promo-sliders-list">
           <li class="promo-sliders-item">
@@ -256,14 +256,14 @@
         <p class="service-description">Хороший интернет-магазин отличается от плохого не только ценами!
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <div class="service-slider-wrapper">
-          <ul class="service-list">
-            <li class="service-item">
-              <button class="slide-button active-button" type="button">Доставка</button></li>
-            <li class="service-item">
-              <button class="slide-button" type="button">Гарантия</button></li>
-            <li class="service-item">
-              <button class="slide-button" type="button">Кредит</button></li>
-          </ul>
+          <input class="visually-hidden service-slider-btn-1" type="radio" id="button-1" name="service-toggle" checked>
+          <input class="visually-hidden service-slider-btn-2" type="radio" id="button-2" name="service-toggle">
+          <input class="visually-hidden service-slider-btn-3" type="radio" id="button-3" name="service-toggle">
+          <div class="service-control">
+            <label class="control-1" for="button-1">Доставка</label>
+            <label class="control-2" for="button-2">Гарантия</label>
+            <label class="control-3" for="button-3">Кредит</label>
+          </div>
           <ul class="service-slider-list">
           <li class="service-slider-item service-slider-delivery service-slider-active">
             <h3 class="section-title service-slider-title">Доставка</h3>
@@ -438,6 +438,6 @@
       <span class="visually-hidden">Закрыть</span>
     </button>
   </section>
-  <script src="js/file.js"></script>
+ <!--  <script src="js/file.js"></script> -->
 </body>
 </html>
